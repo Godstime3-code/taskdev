@@ -11,7 +11,9 @@ function addTodo(){
     button.textContent = 'Delete';
     button.classList.add('todo-btn')
     let todoList = todoInput.value.trim();
-    let task = document.createTextNode(todoList);
+    let task = document.createElement('span');
+    task.textContent = todoList
+    li.append(task)
     let ul = document.querySelector('.container ul');
     ul.appendChild(li);
     
